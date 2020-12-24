@@ -1,11 +1,17 @@
 {% extends 'base.html' %}
 
-{% block title %} Blog{% endblock title %}
+{% block title %} Search Results {% endblock title %}
 {% block blogactive %} active {% endblock blogactive %}
 
 {% block body %}
 <div class="container my-3">
-    <h2>Coding Articles By i-Coder:</h2>
+    <h2>Search Result:</h2>
+    {% if allPosts|length < 1 %}
+    <p>No search Results</p>
+
+    It looks like there aren't many great matches for your search{{query}}
+
+    {% endif %}
     {% for post in allPosts %}
     <div class="row g-0 border rounded overflow-hidden flex-md-row my-4 shadow-sm h-md-250 position-relative">
         <div class="col p-4 d-flex flex-column position-static">
