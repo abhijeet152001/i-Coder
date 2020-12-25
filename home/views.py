@@ -12,7 +12,7 @@ def home(request):
 def about(request):
     # messages.success(request, "This is About")
     # return HttpResponse('This is about')
-    return render(request, 'home/about.html')
+    return render(request, 'home/BLOG_About.html')
 
 def contact(request):
     messages.error(request, 'Welcome To Contact')
@@ -34,7 +34,7 @@ def contact(request):
       
      
     # return HttpResponse('This is contact')
-    return render(request, 'home/contact.html')  
+    return render(request, 'home/BLOG_Contact.html')  
 
 
 def search(request):
